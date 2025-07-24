@@ -161,8 +161,3 @@ Bu proje yalnızca eğitim ve güvenlik araştırmaları amaçlıdır. Yasa dı�
 Bu proje MIT Lisansı altında lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasına bakın.
 
 ---
-
-**Geliştirici**: Manus AI
-**Son Güncelleme**: 24 Temmuz 2025
-
-
