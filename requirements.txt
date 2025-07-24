@@ -1,0 +1,7 @@
+Flask
+requests
+beautifulsoup4
+
+
+PyTelegramBotAPI
+
