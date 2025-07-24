@@ -8,7 +8,7 @@ bot = telebot.TeleBot(BOT_TOKEN)
 
 user_states = {}
 
-# /phis komutu
+
 @bot.message_handler(commands=['phis'])
 def phis_command(message):
     if message.chat.type != "private":
@@ -32,11 +32,11 @@ def phis_command(message):
 
     user_states[message.chat.id] = "waiting_for_selection"
 
-# Mesajlara tepki verme
+
 @bot.message_handler(func=lambda message: message.text in ["Instagram 📸", "Facebook 👍", "TikTok 🎵", "Twitter 🐦", "Snapchat 👻", "Gmail 📧", "Geri ↩️"])
 def handle_buttons(message):
     if message.chat.id not in user_states:
-        # Kullanıcı /phis komutunu çalıştırmadan butona bastıysa
+
         bot.send_message(message.chat.id, "Lütfen önce /phis komutunu kullanın.")
         return
     
