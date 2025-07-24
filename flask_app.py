@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 app = Flask(__name__)
 
 # Telegram bot ayarları - Bu değerleri kendi bot token'ınız ve grup ID'niz ile değiştirin
-TELEGRAM_BOT_TOKEN = '6734341420:AAHZK3L1nXLzMGVYdYLatLiBgk1Vj430bCs'
+TELEGRAM_BOT_TOKEN = '1234567889:wdfkadopfıhbasodfhbdzoıfghnaesoısdfgns'
 TELEGRAM_API_URL = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
 LOG_GROUP_CHAT_ID = '-1002033390647'
 
