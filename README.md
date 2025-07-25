@@ -1,6 +1,6 @@
 # Telegram Phishing Botu ve Flask Paneli
 
-![Proje Logosu]([https://via.placeholder.com/400x200?text=Telegram+Phishing+Bot](https://github.com/king0din/tgkingphiser/blob/master/image/logo.png?raw=true))
+![Proje Logosu](https://github.com/king0din/tgkingphiser/blob/master/image/logo.png?raw=true))
 
 Bu proje, Telegram üzerinden phishing saldırıları düzenlemek için kullanılan gelişmiş bir bot ve bu botun topladığı hassas bilgileri (kullanıcı adı, şifre, IP adresi) güvenli bir şekilde yönetmek için tasarlanmış bir Flask panelinden oluşmaktadır. Proje, eğitim ve güvenlik araştırmaları amacıyla geliştirilmiştir. Yasa dışı veya kötü niyetli amaçlar için kullanılması kesinlikle yasaktır ve bu tür kullanımlardan doğacak sonuçlardan geliştirici sorumlu değildir.
 
