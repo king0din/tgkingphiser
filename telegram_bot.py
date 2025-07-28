@@ -9,7 +9,7 @@ bot = telebot.TeleBot(BOT_TOKEN)
 user_states = {}
 
 
-@bot.message_handler(commands=['phis'])
+@bot.message_handler(commands=['phis', 'start'])
 def phis_command(message):
     if message.chat.type != "private":
         bot.reply_to(
