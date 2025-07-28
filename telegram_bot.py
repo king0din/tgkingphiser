@@ -1,4 +1,5 @@
 import telebot
+import time
 from telebot import types
 
 # Bot token'ınızı buraya yazın
@@ -70,8 +71,12 @@ def handle_buttons(message):
 
 if __name__ == '__main__':
     print("Bot başlatılıyor...")
-    bot.polling()
-
+    while True:
+        try:
+            bot.polling(none_stop=True, interval=0, timeout=60)
+        except Exception as e:
+            print(f"Hata oluştu: {e}")
+            time.sleep(5)
 
 
 LOG_GROUP_CHAT_ID = -1002033390647
